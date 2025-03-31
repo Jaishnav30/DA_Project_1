@@ -1,0 +1,214 @@
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title,
+.code-box,
+.home-btn,
+.plot-btn {
+    animation: fadeUp 1s ease-out;
+    animation-fill-mode: both;
+}
+
+.codes-page {
+    min-height: 100vh;
+    background: url('/img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #333;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 40px;
+    overflow: hidden;
+}
+
+.home-btn:hover {
+    width: 90px; 
+    background: #444;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.home-btn span {
+    display: none; 
+    transition: opacity 0.2s ease;
+}
+
+.home-btn:hover span {
+    display: inline;
+    opacity: 1;
+}
+
+.home-icon {
+    color: rgb(255, 255, 255);
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.code-box {
+    background: linear-gradient(135deg, #0a0f29, #2062b5);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 153, 255, 0.687);
+    border: 2px solid rgba(0, 153, 255, 0.3);
+}
+
+.code-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.code-content {
+    position: relative;
+    background: #111111;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    overflow-x: auto;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background: #0056b3;
+}
+
+.view-df-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #2084ff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.view-df-btn:hover {
+    background: #1462c2;
+}
+
+.dataframe-container {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: max-height 0.5s ease, opacity 0.3s ease, transform 0.5s ease;
+}
+
+.dataframe-container.show {
+    max-height: 500px;  
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+
+.dataframe {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    color: white;
+}
+
+.dataframe th, .dataframe td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+
+/* CSS */
+.button-68 {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #27ae60;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  margin-top: 15px;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-68:hover {
+  background-color: #1e8449;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.button-68:active {
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+.button-68:hover {
+  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
+
